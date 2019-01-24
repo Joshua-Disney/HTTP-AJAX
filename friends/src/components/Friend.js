@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Friends.css';
+
 class Friend extends React.Component {
   constructor(props) {
     super(props);
@@ -7,10 +9,8 @@ class Friend extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.friend.name}
-        {this.props.friend.age}
-        {this.props.friend.email}
+      <div className='friend'>
+        <h2>{this.props.friend.name}</h2>
       </div>
     )
   }

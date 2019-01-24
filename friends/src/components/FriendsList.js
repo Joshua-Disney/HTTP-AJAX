@@ -23,10 +23,8 @@ class FriendsList extends React.Component {
   }
 
   render() {
-    console.log(this.state.friends);
     return(
-      <div>
-        <h1>Is this working?</h1>
+      <div className='friendsList'>
         {this.state.friends.map(friend => (
           <Friend friend={friend} />
         ))}
