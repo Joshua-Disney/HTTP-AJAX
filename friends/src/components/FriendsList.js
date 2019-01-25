@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import Friend from './Friend';
+import './Friends.css';
 
 class FriendsList extends React.Component {
   constructor(props) {
@@ -9,10 +10,17 @@ class FriendsList extends React.Component {
 
   render() {
     return(
-      <div className='friendsList'>
-        {this.props.friends.map(friend => (
-          <Friend friend={friend} />
-        ))}
+      <div>
+        <div className='friendsList'>
+          {this.props.friends.map(friend => (
+            <NavLink to={`/friends/${friend.id}`} className='friend' key={friend.id}>
+              <h2>{friend.name}</h2>
+            </NavLink>
+          ))}
+        </div>
+        <NavLink to='/friend-form'>
+          <button>Add Friend</button>
+        </NavLink>
       </div>
     )
   }

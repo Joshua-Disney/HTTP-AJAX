@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import FriendsList from './components/FriendsList';
 import FriendForm from './components/FriendForm';
+import FriendCard from './components/FriendCard';
 
 import './App.css';
 
@@ -53,9 +54,15 @@ class App extends React.Component {
             />
           )} 
         />
-        <NavLink to='/friend-form'>
-          <button>Add Friend</button>
-        </NavLink>
+        <Route
+          path='/friends/:friendId'
+          render={props => (
+            <FriendCard
+              {...props}
+              friends={this.state.friends}
+            />
+          )}
+        />
       </div>
     );
   }
