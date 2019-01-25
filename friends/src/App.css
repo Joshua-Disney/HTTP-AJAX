@@ -1,0 +1,11 @@
+.App {
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.tempHeader {
+  text-align: center;
+}
