@@ -19,8 +19,14 @@ class FriendCard extends React.Component {
           <p>{this.friend.email}</p>
         </div>
         <div className='buttons'>
-          <button>Delete Friend</button>
-          <button>Update Friend</button>
+          <button
+            onClick={event => this.props.populateForm(event, this.friend.id)}>
+              Update Friend
+          </button>
+          <button
+            onClick={event => this.props.deleteFriend(event, this.friend.id)}>
+            Delete Friend
+          </button>
         </div>
       </div>
     )

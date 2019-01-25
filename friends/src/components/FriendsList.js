@@ -10,7 +10,7 @@ class FriendsList extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='homePage'>
         <div className='friendsList'>
           {this.props.friends.map(friend => (
             <NavLink to={`/friends/${friend.id}`} className='friend' key={friend.id}>
@@ -19,7 +19,7 @@ class FriendsList extends React.Component {
           ))}
         </div>
         <NavLink to='/friend-form'>
-          <button>Add Friend</button>
+          <button className='addButton'>Add Friend</button>
         </NavLink>
       </div>
     )
