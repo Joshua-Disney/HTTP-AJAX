@@ -13,10 +13,15 @@ class FriendCard extends React.Component {
   render() {
     return(
       <div>
-        <h1>Testing</h1>
-        <h2>{this.friend.name}</h2>
-        <p>{this.friend.age} years old.</p>
-        <p>{this.friend.email}</p>
+        <div className='friend-info'>
+          <h2>{this.friend.name}</h2>
+          <p>{this.friend.age} years old.</p>
+          <p>{this.friend.email}</p>
+        </div>
+        <div className='buttons'>
+          <button>Delete Friend</button>
+          <button>Update Friend</button>
+        </div>
       </div>
     )
   }
